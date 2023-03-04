@@ -2,7 +2,7 @@
 
 #include "../../modint/modint.hpp"
 
-#define mint modint<1e9+7>
+#define mint modint<1000000007>
 
 int main() {
     int n, m;
