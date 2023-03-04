@@ -12,11 +12,6 @@ data:
       path: template.hpp
       title: template.hpp
   verificationCategories:
-  - name: .
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
   - name: verify/aoj
     pages:
     - icon: ':heavy_check_mark:'
