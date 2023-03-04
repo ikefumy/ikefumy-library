@@ -51,7 +51,7 @@ struct modint{
         return tmp;
     }
 
-    void modpow(ll y){
+    modint modpow(ll y){
         modint tmp = (*this);
         (*this) = 1;
         while(y > 0){
@@ -61,6 +61,7 @@ struct modint{
             tmp *= tmp;
             y /= 2;
         }
+        return (*this);
     }
 
     constexpr modint operator + (const modint& rhs) const {
@@ -86,10 +87,3 @@ struct modint{
         return lhs;
     }
 };
-
-mint modpow(mint x, ll y){
-    if(y == 0) return 1;
-    mint e = modpow(x, y / 2);
-    e = e * e;
-    return e * (y % 2 == 0 ? 1 : x);
-}
