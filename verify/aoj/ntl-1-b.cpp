@@ -72,6 +72,8 @@ template<class T> bool chmax(T& x, T y){
 
 #include "../../modint/modint.hpp"
 
+#define mint modint<1000000007>
+
 int main() {
     cin.tie(nullptr);
     ios_base::sync_with_stdio(false);
