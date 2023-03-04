@@ -73,10 +73,10 @@ data:
     \ ostream &operator << (ostream& lhs, const modint& rhs){\r\n        return lhs\
     \ << rhs.num;\r\n    }\r\n\r\n    friend istream &operator >> (istream& lhs, modint&\
     \ rhs){\r\n        lhs >> rhs.num;\r\n        return lhs;\r\n    }\r\n};\n#line\
-    \ 74 \"verify/aoj/ntl-1-b.cpp\"\n\r\nint main() {\r\n    cin.tie(nullptr);\r\n\
-    \    ios_base::sync_with_stdio(false);\r\n    cout << fixed << setprecision(20);\r\
-    \n    int n, m;\r\n    cin >> n >> m;\r\n    cout << mint(n).modpow(m) << '\\\
-    n';\r\n}\n"
+    \ 74 \"verify/aoj/ntl-1-b.cpp\"\n\r\n#define mint modint<1000000007>\r\n\r\nint\
+    \ main() {\r\n    cin.tie(nullptr);\r\n    ios_base::sync_with_stdio(false);\r\
+    \n    cout << fixed << setprecision(20);\r\n    int n, m;\r\n    cin >> n >> m;\r\
+    \n    cout << mint(n).modpow(m) << '\\n';\r\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
     \r\n\r\n#include<bits/stdc++.h>\r\nusing namespace std;\r\n#define ll long long\r\
     \n#define ull unsigned long long\r\n#define db double\r\n#define pii pair<int,int>\r\
@@ -107,16 +107,16 @@ data:
     \n#define rrepll4(i, a, b, c) for (ll i = b - 1; i >= (ll)a; i -= c)\r\n \r\n\
     // for_earh\r\n#define fore(e, v) for (auto&& e : v)\r\n \r\n// vector\r\n#define\
     \ all(v) v.begin(), v.end()\r\n#define rall(v) v.rbegin(), v.rend()\r\n\r\n#include\
-    \ \"../../modint/modint.hpp\"\r\n\r\nint main() {\r\n    cin.tie(nullptr);\r\n\
-    \    ios_base::sync_with_stdio(false);\r\n    cout << fixed << setprecision(20);\r\
-    \n    int n, m;\r\n    cin >> n >> m;\r\n    cout << mint(n).modpow(m) << '\\\
-    n';\r\n}"
+    \ \"../../modint/modint.hpp\"\r\n\r\n#define mint modint<1000000007>\r\n\r\nint\
+    \ main() {\r\n    cin.tie(nullptr);\r\n    ios_base::sync_with_stdio(false);\r\
+    \n    cout << fixed << setprecision(20);\r\n    int n, m;\r\n    cin >> n >> m;\r\
+    \n    cout << mint(n).modpow(m) << '\\n';\r\n}"
   dependsOn:
   - modint/modint.hpp
   isVerificationFile: false
   path: verify/aoj/ntl-1-b.cpp
   requiredBy: []
-  timestamp: '2023-03-04 11:31:09+09:00'
+  timestamp: '2023-03-04 11:34:24+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: verify/aoj/ntl-1-b.cpp
