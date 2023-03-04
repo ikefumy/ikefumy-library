@@ -7,5 +7,5 @@
 int main() {
     int n, m;
     cin >> n >> m;
-    cout << (mint)n.modpow(m) << '\n';
+    cout << modpow(n, m) << '\n';
 }
