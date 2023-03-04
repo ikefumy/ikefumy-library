@@ -1,6 +1,16 @@
 ---
 data:
-  libraryCategories: []
+  libraryCategories:
+  - name: modint
+    pages:
+    - icon: ':warning:'
+      path: modint/modint.hpp
+      title: modint/modint.hpp
+  - name: verify/aoj
+    pages:
+    - icon: ':warning:'
+      path: verify/aoj/ntl-1-b.cpp
+      title: verify/aoj/ntl-1-b.cpp
   verificationCategories:
   - name: .
     pages:
