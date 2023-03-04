@@ -2,6 +2,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 #include "../../modint/modint.hpp"
 
