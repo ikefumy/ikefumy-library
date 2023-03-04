@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: verify/aoj/ntl-1-b.cpp
+    title: verify/aoj/ntl-1-b.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -77,7 +80,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: modint/modint.hpp
-  requiredBy: []
+  requiredBy:
+  - verify/aoj/ntl-1-b.cpp
   timestamp: '2023-03-04 10:46:21+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

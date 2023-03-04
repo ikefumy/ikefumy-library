@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: modint/modint.hpp
+    title: modint/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -9,27 +12,52 @@ data:
   attributes:
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
-    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
-    \  File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
-    \                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n \
-    \ File \"/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: /modint/modint.hpp:\
-    \ line -1: no such header\n"
+  bundledCode: "#line 1 \"verify/aoj/ntl-1-b.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
+    \r\n\r\n#line 1 \"modint/modint.hpp\"\ntemplate<long long mod>\r\nstruct modint{\r\
+    \n    long long num;\r\n\r\n    constexpr modint(long long x = 0) : num((x + mod)\
+    \ % mod) {}\r\n\r\n    constexpr modint &operator += (const modint& rhs){\r\n\
+    \        num = (num + rhs.num) % mod;\r\n        return *this;\r\n    }\r\n  \
+    \  constexpr modint &operator -= (const modint& rhs){\r\n        num  -= rhs.num;\r\
+    \n        while(num < 0) num += mod;\r\n        num %= mod;\r\n        return\
+    \ *this;\r\n    }\r\n    constexpr modint &operator *= (const modint& rhs){\r\n\
+    \        num = num * rhs.num % mod;\r\n        return *this;\r\n    }\r\n    constexpr\
+    \ modint &operator /= (modint rhs){\r\n        int exp = mod - 2;\r\n        while(exp\
+    \ > 0){\r\n            if(exp % 2){\r\n                *this *= rhs;\r\n     \
+    \       }\r\n            rhs *= rhs;\r\n            exp /= 2;\r\n        }\r\n\
+    \        return *this;\r\n    }\r\n\r\n    constexpr modint operator ++ (){\r\n\
+    \        num = (num + 1) % mod;\r\n        return *this;\r\n    }\r\n    constexpr\
+    \ modint operator ++ (int n){\r\n        (void)n;\r\n        modint tmp = *this;\r\
+    \n        ++(*this);\r\n        return tmp;\r\n    }\r\n    constexpr modint operator\
+    \ -- (){\r\n        num = (num + mod - 1) % mod;\r\n        return *this;\r\n\
+    \    }\r\n    constexpr modint operator -- (int n){\r\n        (void)n;\r\n  \
+    \      const modint tmp = *this;\r\n        --(*this);\r\n        return tmp;\r\
+    \n    }\r\n\r\n    void modpow(ll y){\r\n        modint tmp = (*this);\r\n   \
+    \     (*this) = 1;\r\n        while(y > 0){\r\n            if(y % 2){\r\n    \
+    \            (*this) *= tmp;\r\n            }\r\n            tmp *= tmp;\r\n \
+    \           y /= 2;\r\n        }\r\n    }\r\n\r\n    constexpr modint operator\
+    \ + (const modint& rhs) const {\r\n        return modint(*this) += rhs;\r\n  \
+    \  }\r\n    constexpr modint operator - (const modint& rhs) const {\r\n      \
+    \  return modint(*this) -= rhs;\r\n    }\r\n    constexpr modint operator * (const\
+    \ modint& rhs) const {\r\n        return modint(*this) *= rhs;\r\n    }\r\n  \
+    \  constexpr modint operator / (const modint& rhs) const {\r\n        return modint(*this)\
+    \ /= rhs;\r\n    }\r\n\r\n    \r\n    friend ostream &operator << (ostream& lhs,\
+    \ const modint& rhs){\r\n        return lhs << rhs.num;\r\n    }\r\n\r\n    friend\
+    \ istream &operator >> (istream& lhs, modint& rhs){\r\n        lhs >> rhs.num;\r\
+    \n        return lhs;\r\n    }\r\n};\r\n\r\nmint modpow(mint x, ll y){\r\n   \
+    \ if(y == 0) return 1;\r\n    mint e = modpow(x, y / 2);\r\n    e = e * e;\r\n\
+    \    return e * (y % 2 == 0 ? 1 : x);\r\n}\n#line 4 \"verify/aoj/ntl-1-b.cpp\"\
+    \n\r\n#define mint modint<1e9+7>\r\n\r\nint main() {\r\n    int n, m;\r\n    cin\
+    \ >> n >> m;\r\n    cout << (mint)n.modpow(m) << '\\n';\r\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
-    \r\n\r\n#include \"/modint/modint.hpp\"\r\n\r\n#define mint modint<1e9+7>\r\n\r\
-    \nint main() {\r\n    int n, m;\r\n    cin >> n >> m;\r\n    cout << (mint)n.modpow(m)\
+    \r\n\r\n#include \"../../modint/modint.hpp\"\r\n\r\n#define mint modint<1e9+7>\r\
+    \n\r\nint main() {\r\n    int n, m;\r\n    cin >> n >> m;\r\n    cout << (mint)n.modpow(m)\
     \ << '\\n';\r\n}"
-  dependsOn: []
+  dependsOn:
+  - modint/modint.hpp
   isVerificationFile: false
   path: verify/aoj/ntl-1-b.cpp
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-03-04 10:50:11+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: verify/aoj/ntl-1-b.cpp
