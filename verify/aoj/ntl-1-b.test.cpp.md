@@ -1,18 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: modint/modint.hpp
     title: modint/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
-  bundledCode: "#line 1 \"verify/aoj/ntl-1-b.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
+  bundledCode: "#line 1 \"verify/aoj/ntl-1-b.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
     \r\n\r\n#include<bits/stdc++.h>\r\nusing namespace std;\r\n#define ll long long\r\
     \n#define ull unsigned long long\r\n#define db double\r\n#define pii pair<int,int>\r\
     \n#define pli pair<ll,int>\r\n#define pil pair<int,ll>\r\n#define pll pair<ll,ll>\r\
@@ -73,8 +75,8 @@ data:
     \ ostream &operator << (ostream& lhs, const modint& rhs){\r\n        return lhs\
     \ << rhs.num;\r\n    }\r\n\r\n    friend istream &operator >> (istream& lhs, modint&\
     \ rhs){\r\n        lhs >> rhs.num;\r\n        return lhs;\r\n    }\r\n};\n#line\
-    \ 74 \"verify/aoj/ntl-1-b.cpp\"\n\r\n#define mint modint<1000000007>\r\n\r\nint\
-    \ main() {\r\n    cin.tie(nullptr);\r\n    ios_base::sync_with_stdio(false);\r\
+    \ 74 \"verify/aoj/ntl-1-b.test.cpp\"\n\r\n#define mint modint<1000000007>\r\n\r\
+    \nint main() {\r\n    cin.tie(nullptr);\r\n    ios_base::sync_with_stdio(false);\r\
     \n    cout << fixed << setprecision(20);\r\n    int n, m;\r\n    cin >> n >> m;\r\
     \n    cout << mint(n).modpow(m) << '\\n';\r\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
@@ -113,16 +115,16 @@ data:
     \n    cout << mint(n).modpow(m) << '\\n';\r\n}"
   dependsOn:
   - modint/modint.hpp
-  isVerificationFile: false
-  path: verify/aoj/ntl-1-b.cpp
+  isVerificationFile: true
+  path: verify/aoj/ntl-1-b.test.cpp
   requiredBy: []
-  timestamp: '2023-03-04 11:34:24+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2023-03-04 11:39:08+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: verify/aoj/ntl-1-b.cpp
+documentation_of: verify/aoj/ntl-1-b.test.cpp
 layout: document
 redirect_from:
-- /library/verify/aoj/ntl-1-b.cpp
-- /library/verify/aoj/ntl-1-b.cpp.html
-title: verify/aoj/ntl-1-b.cpp
+- /verify/verify/aoj/ntl-1-b.test.cpp
+- /verify/verify/aoj/ntl-1-b.test.cpp.html
+title: verify/aoj/ntl-1-b.test.cpp
 ---

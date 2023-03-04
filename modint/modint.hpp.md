@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: verify/aoj/ntl-1-b.cpp
-    title: verify/aoj/ntl-1-b.cpp
-  _extendedVerifiedWith: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify/aoj/ntl-1-b.test.cpp
+    title: verify/aoj/ntl-1-b.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"modint/modint.hpp\"\ntemplate<long long mod>\r\nstruct modint{\r\
@@ -76,11 +76,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: modint/modint.hpp
-  requiredBy:
-  - verify/aoj/ntl-1-b.cpp
+  requiredBy: []
   timestamp: '2023-03-04 11:14:47+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify/aoj/ntl-1-b.test.cpp
 documentation_of: modint/modint.hpp
 layout: document
 redirect_from:
