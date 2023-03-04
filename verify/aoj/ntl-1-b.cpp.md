@@ -47,17 +47,17 @@ data:
     \ if(y == 0) return 1;\r\n    mint e = modpow(x, y / 2);\r\n    e = e * e;\r\n\
     \    return e * (y % 2 == 0 ? 1 : x);\r\n}\n#line 4 \"verify/aoj/ntl-1-b.cpp\"\
     \n\r\n#define mint modint<1000000007>\r\n\r\nint main() {\r\n    int n, m;\r\n\
-    \    cin >> n >> m;\r\n    cout << (mint)n.modpow(m) << '\\n';\r\n}\n"
+    \    cin >> n >> m;\r\n    cout << modpow(n, m) << '\\n';\r\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
     \r\n\r\n#include \"../../modint/modint.hpp\"\r\n\r\n#define mint modint<1000000007>\r\
-    \n\r\nint main() {\r\n    int n, m;\r\n    cin >> n >> m;\r\n    cout << (mint)n.modpow(m)\
-    \ << '\\n';\r\n}"
+    \n\r\nint main() {\r\n    int n, m;\r\n    cin >> n >> m;\r\n    cout << modpow(n,\
+    \ m) << '\\n';\r\n}"
   dependsOn:
   - modint/modint.hpp
   isVerificationFile: false
   path: verify/aoj/ntl-1-b.cpp
   requiredBy: []
-  timestamp: '2023-03-04 10:55:44+09:00'
+  timestamp: '2023-03-04 11:06:49+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: verify/aoj/ntl-1-b.cpp
